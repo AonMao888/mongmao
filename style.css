@@ -1,0 +1,566 @@
+@font-face{
+    src: url('f2');
+    font-family: jojar;
+}
+@font-face{
+    src: url('f1');
+    font-family: duen81;
+}
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+:root{
+    --color: #333;
+    --back: #fff;
+    --second: #eeeeeeb2;
+}
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--back);
+    font-family: 'Jost', sans-serif;
+}
+.main{
+    height: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #ffffff1d;
+    display: none;
+}
+nav{
+    display: flex;
+    background: var(--back);
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(105, 105, 105, 0.33);
+}
+nav .logo{
+    margin: 0;
+    font-size: 36px;
+    color: red;
+    font-weight: normal;
+    font-family: duen81;
+    display: flex;
+    transform: translateY(3px);
+    flex-direction: column;
+    align-items: flex-start;
+    user-select: none;
+}
+nav .logo span{
+    margin: 0;
+    font-family: jojar;
+    color: var(--color);
+    font-size: 15px;
+    transform: translateY(-9px);
+}
+.link{
+    display: flex;
+    align-items: center;
+}
+.link a{
+    user-select: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 7px;
+    padding: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 9px;
+    color: var(--color);
+}
+.link a:hover ion-icon{
+    transform: scale(1.4) translateY(6px);
+    color: rebeccapurple;
+}
+.link a:hover p{
+    opacity: 0;
+}
+.link a ion-icon{
+    transition: 0.3s;
+    transform: scale(1);
+    font-size: 23px;
+    margin: 2px;
+}
+.link a p{
+    margin: 2px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+.link .settingbtn{display: none;}
+.body{
+    background: var(--back);
+    display: flex;
+    height: 100%;
+}
+.chat{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 36px;
+}
+.list{
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.line{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    margin: 5px 0;
+}
+.line img{
+    height: 42px;
+    width: 42px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    user-select: none;
+    margin: 5px;
+    cursor: pointer;
+}
+.text{
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+    display: flex;
+    max-width: 78%;
+    flex-direction: column;
+    padding: 7px 10px;
+}
+.in{
+    justify-content: left;
+}
+.in .text{
+    background: var(--back);
+    border: 1px solid rgba(105, 105, 105, 0.408);
+    border-bottom-right-radius: 9px;
+}
+.out{
+    justify-content: right;
+}
+.out .text{
+    background: royalblue;
+    align-items: flex-end;
+    border-bottom-left-radius: 9px;
+    color: white;
+}
+.out .text span{color: white;}
+.text p{
+    font-size: 18px;
+    font-family: jojar;
+    margin: 2px;
+}
+.text span{
+    margin: 2px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: var(--color);
+}
+.text span ion-icon{
+    font-size: 17px;
+    margin-right: 2px;
+}
+.setting{
+    min-width: 369px;
+    display: flex;
+    color: var(--color);
+    margin-left: 36px;
+    flex-direction: column;
+}
+.prof{
+    padding: 7px 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+    user-select: none;
+}
+.prof img{
+    height: 78px;
+    width: 78px;
+    margin-right: 5px;
+    object-fit: cover;
+    object-position: center;
+    margin-left: 7px;
+    border-radius: 9px;
+    border: 4px solid #87878732;
+}
+.prof h1{
+    margin: 5px;
+    color: var(--color);
+    font-family: jojar;
+    display: flex;
+    font-size: 23px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.prof h1 span{
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    word-break: break-all;
+}
+.setting .item{
+    display: flex;
+    width: 96%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    user-select: none;
+    margin: 3px auto;
+}
+.setting .item ion-icon{
+    font-size: 24px;
+    margin-left: 9px;
+}
+select{
+    background: var(--back);
+    margin-right: 8px;
+    padding: 5px 9px;
+    outline: 1px solid transparent;
+    border: 1px solid rgba(134, 134, 134, 0.471);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--color);
+    font-family: jojar;
+}
+.setting .item p{
+    margin: 8px;
+    margin-right: 12px;
+    font-size: 17px;
+    font-family: jojar;
+}
+.setting .item:nth-child(4){
+    transition: 0.3s;
+    cursor: pointer;
+}
+.setting .item:nth-child(4):hover{
+    color: royalblue;
+}
+.setting hr{
+    background: rgba(105, 105, 105, 0.41);
+    width: 78%;
+    margin: 19px auto;
+    height: 0.5px;
+    border: none;
+}
+.setting button{
+    display: flex;
+    align-items: center;
+    background: none;
+    cursor: pointer;
+    border: 2px solid red;
+    justify-content: center;
+    border-radius: 5px;
+    width: 63%;
+    color: red;
+    transition: 0.4s;
+    user-select: none;
+    outline: 1px solid red;
+    outline-offset: 1.9px;
+    transform: scale(1);
+    margin: 9px auto;
+}
+.setting button:active{
+    transform: scale(0.91);
+}
+.setting button:hover{
+    color: white;
+    background: red;
+}
+.setting button ion-icon{
+    font-size: 23px;
+}
+.setting button p{
+    margin: 7px 5px;
+    font-size: 16px;
+    font-family: jojar;
+}
+.closesetting{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    color: red;
+    padding: 4px;
+    cursor: pointer;
+    display: none;
+}
+.closesetting p{
+    margin: 2px;
+    font-size: 14px;
+}
+.closesetting ion-icon{
+    font-size: 15px;
+}
+.input{
+    background: var(--back);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-top: 0.5px solid rgba(105, 105, 105, 0.336);
+    padding: 6px 0;
+}
+.input .inpbox{
+    width: 100%;
+    display: flex;
+    margin-left: 8px;
+    align-items: center;
+    border-radius: 4px;
+    background: #87878732;
+}
+.input .inpbox input{
+    font-size: 18px;
+    width: 100%;
+    font-family: jojar;
+    background: none;
+    color: var(--color);
+    border: none;
+    outline: none;
+    padding: 8px;
+}
+.input .inpbox ion-icon{
+    color: var(--color);
+    font-size: 22px;
+    padding: 4px;
+    display: none;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.input button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    background: none;
+    outline: none;
+    color: royalblue;
+    font-weight: bold;
+    border: none;
+    margin: 0 5px;
+    transform: scale(1);
+    transition: 0.3s;
+}
+.input button:active{
+    transform: scale(0.91);
+}
+.input button:hover{
+    color: var(--color);
+}
+.sign{
+    background: white;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+}
+.sign h1{
+    margin: 5px;
+    font-size: 36px;
+    color: var(--color);
+}
+.sign p{
+    margin: 5px 15px;
+    max-width: 591px;
+    font-size: 17px;
+    color: var(--color);
+    text-align: center;
+}
+.sign button{
+    display: flex;
+    align-items: center;
+    background: none;
+    margin-top: 51px;
+    margin-bottom: 15px;
+    outline: none;
+    border: 1px solid rgba(105, 105, 105, 0.496);
+    border-radius: 7px;
+    padding: 5px 9px;
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+    transform: scale(1);
+}
+.sign button:hover{
+    box-shadow: 3px 2px 19px rgba(105, 105, 105, 0.303);
+}
+.sign button:active{
+    transform: scale(0.91);
+}
+.sign button img{
+    width: 29px;
+    height: 29px;
+    margin-left: 5px;
+    user-select: none;
+    object-fit: contain;
+    object-position: center;
+}
+.sign button p{
+    margin: 9px;
+}
+.pop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: #33333341;
+    display: none;
+}
+.pop .div{
+    background: var(--back);
+    border: 1px solid #dadada4a;
+    border-radius: 15px;
+    width: 96%;
+    max-width: 519px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 9px 0;
+}
+.pop .div ion-icon{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    font-size: 23px;
+    padding: 4px;
+    color: var(--color);
+    cursor: pointer;
+}
+.pop .div h1{
+    margin: 5px;
+    font-size: 32px;
+    color: var(--color);
+}
+.pop .div h1 span{
+    font-size: 18px;
+    margin-left: 5px;
+    color: royalblue;
+}
+.pop .div p{
+    font-size: 17px;
+    margin: 5px 19px;
+    color: var(--color);
+}
+.pop .div img{
+    width: 195px;
+    height: 195px;
+    margin-top: 19px;
+    margin-bottom: 27px;
+    object-fit: contain;
+    object-position: center;
+    user-select: none;
+}
+
+@media(max-width:1080px){
+    nav .logo{font-size: 32px;}
+    nav .logo span{font-size: 14px;}
+    .link a:hover ion-icon{    transform: scale(1.2) translateY(7px);}
+    .link a ion-icon{font-size: 21px;}
+    .link a p{font-size: 12px;}
+    .line img{width: 39px;height: 39px;}
+    .text p{font-size: 16px;}
+    .text span{font-size: 13px;}
+    .setting{min-width: 300px;}
+    .prof img{width: 69px;height: 69px;}
+    .prof h1{font-size: 19px;}
+    .prof h1 span{font-size: 13px;}
+    .setting .item ion-icon{font-size: 20px;}
+    select{font-size: 15px;}
+    .setting .item p{font-size: 15px;}
+    .setting button ion-icon{font-size: 20px;}
+    .setting button p{margin: 6px 4px;font-size: 14px;}
+    .input .inpbox input{font-size: 17px;}
+}
+@media(max-width:828px){
+    nav .logo{font-size: 31px;}
+    nav .logo span{font-size: 13px;}
+    nav{justify-content: space-between;}
+    nav .logo{margin-left: 15px;}
+    .link{margin-right: 7px;}
+    .link a ion-icon{font-size: 20px;}
+    .link a:hover ion-icon{transform: scale(1.2) translateY(7px);}
+    .link a p{font-size: 11px;}
+    .chat{margin-right: 19px;}
+    .setting{margin-left: 19px;}
+    .text p{font-size: 15px;}
+    .text span ion-icon{font-size: 16px;}
+    .text span{font-size: 12px;}
+    .setting{min-width: 289px;}
+    .prof{margin-bottom: 8px;}
+    .prof img{width: 59px;height: 59px;    border: 3px solid var(--second);}
+    .prof h1{font-size: 17px;}
+    .prof h1 span{font-size: 12px;}
+    .setting .item ion-icon{font-size: 19px;}
+    select{font-size: 14px;}
+    .setting .item p{font-size: 14px;}
+    .setting hr{margin: 17px auto;}
+    .setting button ion-icon{font-size: 19px;}
+    .setting button p{margin: 5px 4px;font-size: 13px;}
+    .input .inpbox input{font-size: 16px;}
+    .input .inpbox ion-icon{font-size: 20px;}
+    .input button{font-size: 22px;}
+}
+@media(max-width:735px){
+    .link .settingbtn{display: flex;}
+    .chat{margin-right: 0;}
+    .setting{
+        margin-left: 0;
+        background: var(--back);
+        position: fixed;
+        right: -369px;
+        top: 0;
+        border-left: 1px solid rgba(105, 105, 105, 0.486);
+        height: 100%;
+        z-index: 1;
+        transition: 0.3s;
+    }
+    .closesetting{display: flex;}
+    .prof{margin-top: 24px;}
+    .setting .item:nth-child(5){
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .setting .item:nth-child(5):hover{
+        color: royalblue;
+    }
+}
+@media(max-width:578px){
+    .text{max-width: 69%;}
+}
+@media(max-width:500px){
+    nav{position: sticky;top: 0;z-index: 1;}
+    nav .logo{transform: translateY(5px);margin-left: 8px;}
+    nav .logo span{transform: translateY(-5px);}
+    .input{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+    .link{margin-right: 5px;}
+    .link a{margin: 7px 4px;}
+    .link a:hover ion-icon{transform: scale(1.2) translateY(7px);}
+    .link a p{font-size: 11px;margin: 0;}
+    .setting{min-width: 269px;}
+    .text{max-width: 65%;}
+    .pop .div h1{font-size: 21px;}
+    .pop .div h1 span{font-size: 15px;}
+    .pop .div p{font-size: 15px;}
+    .pop .div img{width: 159px;height: 159px;}
+}

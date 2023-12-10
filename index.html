@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>မိူင်းမၢဝ်း Mong Mao</title>
+    <meta name="description" content="တၢင်ႇထိုင်ၵၢင်ၸႂ်ႁဝ်းၵူၼ်းမိူင်းၼႂ်း Web ၼႆႉလႆႈၶႃႈ။">
+    <link rel="stylesheet" href="c">
+    <link rel="shortcut icon" href="logo" type="image/png">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <h1 class="logo">မိူင်းမၢဝ်း<span class="des">ၵၢင်ၸႂ်ၵူၼ်းမိူင်း</span></h1>
+            <div class="link">
+                <a href=""><ion-icon name="scan-outline"></ion-icon><p>Scan</p></a>
+                <a class="qrbtn" title="Invite via QR Code"><ion-icon name="qr-code-outline"></ion-icon><p class="qrtext">QR Code</p></a>
+                <a class="share" title="Invite via link"><ion-icon name="arrow-redo-outline"></ion-icon><p class="sharetext">Share</p></a>
+                <a class="settingbtn"><ion-icon name="settings-outline"></ion-icon><p class="settingtext">Settings</p></a>
+            </div>
+        </nav>
+        <div class="body">
+            <div class="chat">
+                <div class="list">
+    
+                </div>
+                <div class="input">
+                    <div class="inpbox">
+                        <input type="text" class="inp" placeholder="တၢင်းႁၼ်ထိုင်">
+                        <ion-icon onclick="clear()" name="close-circle-outline"></ion-icon>
+                    </div>
+                    <button class="sendbtn"><ion-icon name="send-outline"></ion-icon></button>
+                </div>
+            </div>
+            <div class="setting">
+                <div class="closesetting"><p>Close</p><ion-icon name="chevron-forward-outline"></ion-icon></div>
+                <div class="prof">
+                    <img src="" alt="">
+                    <h1></h1>
+                </div>
+                <hr>
+                <div class="item">
+                    <ion-icon name="language-outline"></ion-icon>
+                    <select>
+                        <option value="shan">ၽႃႇသႃႇတႆး</option>
+                        <option value="tainuea">ᥚᥣᥱᥔᥣᥱᥖᥭᥰ</option>
+                        <option value="burma">မြန်မာဘာသာ</option>
+                        <option value="china">中文</option>
+                        <option value="english">English</option>
+                    </select>
+                </div>
+                <div class="item dlbtn"><ion-icon name="moon-outline"></ion-icon><p class="langtext">ဝၼ်းလႄႈၶမ်ႈ</p></div>
+                <hr>
+                <button class="logout"><ion-icon name="trash-outline"></ion-icon><p class="logoutext">Logout</p></button>
+            </div>
+        </div>
+    </div>
+    <div class="pop">
+        <div class="div">
+            <ion-icon name="close-outline" class="closeqr"></ion-icon>
+            <h1>Invite<span>via QR Code</span></h1>
+            <p>The QR Code shown below is the app QR Code, give your friends scan and join.</p>
+            <img src="http://maoapi.vercel.app/qrcode?text=hello" alt="">
+        </div>
+    </div>
+    <div class="sign">
+        <h1>Login account</h1>
+        <p>In order to send messages to each other in group, login account is required. Click button to login with google account.</p>
+        <button>
+            <img src="https://cdn-icons-png.flaticon.com/256/2702/2702602.png" alt="">
+            <p>Google Login</p>
+        </button>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="j"></script>
+</body>
+</html>
