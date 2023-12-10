@@ -191,9 +191,10 @@ document.querySelector('.dlbtn').onclick=()=>{
 }
 
 document.querySelector(".share").onclick=()=>{
+    let num = Math.floor(Math.random()*123456789)
     navigator.share({
         title:"မိူင်းမၢဝ်း Mong Mao",
-        url:window.location.href
+        url:window.location.href+'?id='+num
     })
 }
 document.querySelector(".pop .div ion-icon").onclick=()=>{
@@ -202,4 +203,4 @@ document.querySelector(".pop .div ion-icon").onclick=()=>{
 document.querySelector(".qrbtn").onclick=()=>{
     pop.style.display = 'flex';
 }
-document.querySelector(".pop .div img").src = 'http://maoapi.vercel.app/qrcode?text='+window.location.href;
+document.querySelector(".pop .div img").src = 'http://maoapi.vercel.app/qrcode?text='+window.location.href+'?id='+Math.floor(Math.random()*123456789);

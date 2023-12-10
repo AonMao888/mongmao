@@ -74,7 +74,7 @@ nav .logo span{
 }
 .link a:hover ion-icon{
     transform: scale(1.4) translateY(6px);
-    color: rebeccapurple;
+    color: royalblue;
 }
 .link a:hover p{
     opacity: 0;
@@ -107,6 +107,7 @@ nav .logo span{
     display: flex;
     position: relative;
     flex-direction: column;
+    padding-bottom: 69px;
 }
 .line{
     display: flex;
